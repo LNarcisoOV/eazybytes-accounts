@@ -6,6 +6,7 @@ spring:
     driverClassName: org.h2.Driver
     username: sa
     password: ''
+
   h2:
     console:
       enable: true
