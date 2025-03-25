@@ -1,9 +1,6 @@
 package com.ms.accounts.model;
 
-import com.fasterxml.jackson.databind.ser.Serializers;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.*;
 
 @Entity
@@ -17,15 +14,22 @@ import lombok.*;
 public class Customer extends BaseEntity {
 
     @Id
+    @Column(name = "CUSTOMER_ID")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long customerId;
 
+    @Column(name = "FIRST_NAME")
     private String firstName;
 
+    @Column(name = "LAST_NAME")
     private String lastName;
 
+    @Column(name = "EMAIL")
     private String email;
 
+    @Column(name = "PHONE")
     private String phone;
 
+    @Column(name = "ADDRESS")
     private String address;
 }
